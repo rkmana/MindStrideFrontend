@@ -19,19 +19,6 @@
 - Frontend Hosting: Vercel
 
 
-## 📦 Installation
-1. Clone the repository:
-   ```
-   git clone https://github.com/debankanmitra/GenaiAssistant.git
-   ```
-2. Install the dependencies:
-   ```
-   npm install
-   ```
-3. Start the Development server:
-   ```
-   npm run dev
-   ```
 
 ## 📄 License
 Mindstride is licensed under the MIT License.
