@@ -48,7 +48,7 @@ function Footer() {
 				</div>
 
 				<div className="mt-3">
-					<p className="text-gray-500 ">Made by Mento Tam Members.</p>
+					<p className="text-gray-500 ">Made by TECB.</p>
 					<p className="text-gray-500 ">
 						© Mindtride 2024. All rights reserved.
 					</p>

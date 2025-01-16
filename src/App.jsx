@@ -1,3 +1,4 @@
+App.jsx
 import { useEffect } from "react";
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -11,7 +12,10 @@ const Error = lazy(() => import("./pages/Error"));
 
 function App() {
   const isUserSignedIn = () => {
-    return !!localStorage.getItem("isSignedIn"); 
+    const token = localStorage.getItem("token");
+    const tokenExpiration = localStorage.getItem("tokenExpiration");
+    if (!token || !tokenExpiration) return false;
+    return Date.now() < parseInt(tokenExpiration, 10);
   };
 
   const ProtectedRoute = ({ children }) => {
@@ -26,9 +30,9 @@ function App() {
           <Route
             path="/home"
             element={
-             
+              <ProtectedRoute>
                 <Home />
-              
+              </ProtectedRoute>
             }
           />
           <Route
